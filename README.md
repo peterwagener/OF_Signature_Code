@@ -1,4 +1,4 @@
-# Hydrologic Signatures Analysis
+# Support Material for Objective Function Impact on Signatures
 
 This repository contains MATLAB code used for generating hydrologic signatures and model evaluation for my thesis.
 

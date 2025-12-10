@@ -4,7 +4,7 @@ This repository contains MATLAB code used for generating hydrologic signatures a
 
 ## Data
 
-Large data files (`.mat`) are not stored in the repository.
+Large data files (`.mat` and `.nc`) are not stored in the repository.
 
 Download them here:
 https://drive.google.com/drive/folders/1ABWhnASsVPEbazySIYHubWO9ghRXlFd0?usp=drive_link

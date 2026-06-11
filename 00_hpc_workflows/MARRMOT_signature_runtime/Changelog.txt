@@ -1,0 +1,51 @@
+This file highlights the most important changes made during version updates. The changes listed here are limited to those changes that directly impact model code. Changes to comments or workflow example files are not included.
+
+=== v2.1 ===
+Updated from v2.0 to v2.1 to incorporate changes in the root-finding method.
+
+- Inclusion of NewtonRaphson solver before fsolve to speeed up the framework
+
+=== v2.0 ===
+Updated from v1.- to v2.- to incorporate the new object-oriented structure
+
+=== v1.4 ===
+Updated from v1.2 to v1.3 to incorporate bug fixes in a few models and to publish m_47. Main changes:
+
+- Added m_47 and necessary additional flux files.
+
+- Fixed a typo in m_09: sign error in S2 equation
+
+- Fixed a typo in m_36: flux_INT missing from S5 equation
+
+- Fixed typos in m_17 and m_25: error in boundary conditions for evap_16, S2 is bottomless
+
+- Fixed error in m_37: added costraint that Smax>0, this otherwise causes numerical instability to the logistic smoother.
+
+=== v1.3 ===
+Updated from v1.2 to v1.3 to incorporate a bug fix in 'interflow_9'. Main changes:
+
+- Added a missing constraint for non-negativity to 'interflow_9'.
+
+=== v1.2 ===
+Updated from v1.1 to v1.2 to incorporate some important user feedback about communication of parameter ranges. Main changes:
+
+- Updated each model parameter range file with an automatic display of the currently chosen parameter ranges, and a warning that these might not be equally appropriate for all purposes.
+
+
+=== v1.1 ===
+Updated from v1.0 to v1.1 to reflect several changes suggested during peer review of the MARRMoT description paper in GMD. Main changes:
+
+- Changed the logistic smoothing function "./Functions/Flux smoothing/smoothThreshold_storage_logistic". This equation used to read: "out = 1 ./ (1+exp((S-Smax-r*e*Smax)/(r*Smax)))"; and now reads: "out = 1 ./ (1+exp((S-Smax+r*e*Smax)/(r*Smax)))". See: https://gist.github.com/philippkraft/aae02d23fbdad62f98a413ab04fe6d83
+
+- Changed the IHACRES model "./Models/Model files/m_05_ihacres_6p_1s" to include pure time delay.
+
+- Changed the IHACRES model name to reflect the addition of a new parameter: "m_05_ihacres_7p_1s"
+
+- Updated the IHACRES parameter range file to reflect the model additions "./Models/Parameter range files/m_05_ihacres_6p_1s_parameter_ranges"
+
+- Added a new Unit Hydrograph routing function as a result from IHACRES changes "./Models/Unit Hydrograph files/uh_8_puredelay"
+
+
+
+=== v1.0 ===
+Base version submitted for review to Geoscientific Model Development
